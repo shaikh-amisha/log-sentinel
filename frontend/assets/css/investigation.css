@@ -1,0 +1,391 @@
+/* ==============================
+   Investigation Center
+============================== */
+.main-content {
+    margin-left: 260px !important;
+    padding: 30px;
+    min-height: 100vh;
+    background: #0b0f16;
+    color: #fff;
+}
+
+.page-header{
+    margin-bottom:25px;
+}
+
+.page-header h1{
+    font-size:34px;
+    margin-bottom:6px;
+    color:#fff;
+    margin-left: 20px;
+}
+
+.page-header p{
+    color:#8b95a7;
+    margin-left: 20px;
+}
+
+
+/* ==============================
+Search
+============================== */
+
+.search-card{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.search-card input{
+    flex:1;
+    background:#111827;
+    border:1px solid #263244;
+    color:white;
+    padding:14px 18px;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+}
+
+.search-card input:focus{
+    border-color:#3b82f6;
+}
+
+.search-card button{
+    padding:14px 28px;
+    background:#2563eb;
+    border:none;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-card button:hover{
+    background:#1d4ed8;
+}
+
+
+/* ==============================
+Main Grid
+============================== */
+
+.investigation-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    margin-bottom:25px;
+}
+
+
+/* ==============================
+Bottom Grid
+============================== */
+
+.bottom-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+
+/* ==============================
+Cards
+============================== */
+
+.graph-card,
+.chat-card,
+.timeline-card,
+.details-card{
+    background:#111827;
+    border:1px solid #1f2937;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(0,0,0,.25);
+    margin-left:30px;
+}
+
+
+/* ==============================
+Card Header
+============================== */
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 22px;
+    border-bottom:1px solid #1f2937;
+}
+
+.card-header h2{
+    font-size:18px;
+    font-weight:600;
+}
+
+.status-badge{
+    background:#16a34a;
+    color:white;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+.ai-status{
+    color:#22c55e;
+    font-size:13px;
+}
+
+
+/* ==============================
+Attack Graph
+============================== */
+
+#attackGraph{
+    width:100%;
+    height:500px;
+    min-height:500px;
+    background:#08101f;
+    position:relative;
+}
+
+.placeholder{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#6b7280;
+    font-size:18px;
+}
+
+
+/* ==============================
+Chat History
+============================== */
+
+.chat-history{
+    height:420px;
+    overflow-y:auto;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+/* Welcome message */
+.chat-message{
+    background:#1e293b;
+    border-left:4px solid #3b82f6;
+    padding:16px 18px;
+    border-radius:10px;
+    line-height:1.8;
+    font-size:14px;
+    color:#cbd5e1;
+}
+
+.chat-message ul{
+    margin-top:10px;
+    padding-left:18px;
+}
+
+/* User message — right aligned */
+.user-message{
+    align-self:flex-end;
+    background:#2563eb;
+    color:#ffffff;
+    padding:12px 16px;
+    border-radius:18px 18px 4px 18px;
+    max-width:75%;
+    font-size:14px;
+    line-height:1.6;
+    word-break:break-word;
+}
+
+/* AI message — left aligned */
+.ai-message{
+    align-self:flex-start;
+    background:#1e293b;
+    color:#e2e8f0;
+    padding:14px 18px;
+    border-radius:18px 18px 18px 4px;
+    border-left:3px solid #3b82f6;
+    max-width:85%;
+    font-size:14px;
+    line-height:1.8;
+    white-space:pre-wrap;
+    word-break:break-word;
+}
+
+/* Analyzing indicator */
+.ai-message.thinking{
+    color:#64748b;
+    font-style:italic;
+    border-left-color:#334155;
+}
+
+
+/* ==============================
+Chat Input
+============================== */
+
+.chat-input{
+    display:flex;
+    border-top:1px solid #1f2937;
+}
+
+.chat-input input{
+    flex:1;
+    border:none;
+    background:#0f172a;
+    color:white;
+    padding:18px;
+    outline:none;
+    font-size:14px;
+}
+
+.chat-input input::placeholder{
+    color:#4b5563;
+}
+
+.chat-input button{
+    width:120px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.chat-input button:hover{
+    background:#1d4ed8;
+}
+
+
+/* ==============================
+Timeline
+============================== */
+
+.timeline{
+    padding:20px;
+}
+
+.timeline-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px;
+    border-left:3px solid #334155;
+    margin-bottom:18px;
+    background:#0f172a;
+    border-radius:10px;
+}
+
+.timeline-item small{
+    color:#9ca3af;
+}
+
+
+/* Severity */
+
+.severity{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    margin-right:12px;
+    display:inline-block;
+}
+
+.low{ background:#22c55e; }
+.medium{ background:#f59e0b; }
+.high{ background:#ef4444; }
+.critical{
+    background:#dc2626;
+    box-shadow:0 0 12px red;
+}
+
+
+/* ==============================
+Threat Details
+============================== */
+
+.details-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    padding:20px;
+}
+
+.detail-box{
+    background:#0f172a;
+    padding:18px;
+    border-radius:12px;
+    border:1px solid #1f2937;
+}
+
+.detail-box span{
+    color:#94a3b8;
+    font-size:13px;
+}
+
+.detail-box h3{
+    margin-top:8px;
+    font-size:20px;
+    color:#38bdf8;
+}
+
+
+/* ==============================
+Scrollbar
+============================== */
+
+.chat-history::-webkit-scrollbar{
+    width:6px;
+}
+
+.chat-history::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+.chat-history::-webkit-scrollbar-thumb{
+    background:#334155;
+    border-radius:20px;
+}
+
+
+/* ==============================
+Responsive
+============================== */
+
+@media(max-width:1200px){
+    .investigation-grid{
+        grid-template-columns:1fr;
+    }
+    .bottom-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+    .search-card{
+        flex-direction:column;
+    }
+    .details-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* Fix sidebar overlap */
+body {
+    display: flex;
+}
+
+.main-content {
+    margin-left: 260px;
+    flex: 1;
+    padding: 30px;
+    min-height: 100vh;
+    background: #0b0f16;
+    color: #fff;
+}

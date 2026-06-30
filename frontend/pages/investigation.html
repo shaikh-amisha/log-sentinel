@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation | LogSentinel AI</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/investigation.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+
+            LogSentinel AI
+
+        </div>
+
+        <a href="dashboard.html">
+
+            Dashboard
+
+        </a>
+
+        <a href="alerts.html">
+
+            Alerts
+
+        </a>
+
+        <a href="log-analytics.html">
+
+            Log Analysis
+
+        </a>
+
+        <a href="incidents.html">
+
+            Incidents
+
+        </a>
+
+        <a href="investigation.html">
+
+            Investigations
+
+        </a>
+
+    </div>
+
+
+
+    <div class="main-content">
+
+
+
+    <!-- Header -->
+
+    <div class="page-header">
+        <h1>Investigation Center</h1>
+        <p>Analyze incidents using AI and visualize attack chains.</p>
+    </div>
+
+
+
+
+    <!-- Main Grid -->
+
+    <div class="investigation-grid">
+
+
+        <!-- Attack Graph -->
+
+        <section class="graph-card">
+
+            <div class="card-header">
+
+                <h2>Attack Graph</h2>
+
+                <span class="status-badge">
+                    Live
+                </span>
+
+            </div>
+
+            <div id="attackGraph" style="
+                    width:100%;
+                    height:500px;
+                    min-height:500px;
+                ">
+
+                
+
+            </div>
+
+        </section>
+
+
+
+        <!-- AI Assistant -->
+
+        <section class="chat-card">
+
+            <div class="card-header">
+
+                <h2>AI Security Assistant</h2>
+
+                <span class="ai-status">
+                    Ollama Connected
+                </span>
+
+            </div>
+
+            <div class="chat-history" id="chat-messages">
+
+                <div class="chat-message">
+
+                    👋 Hello!
+
+                    <br><br>
+
+                    I am your LogSentinel AI Assistant.
+
+                    <br><br>
+
+                    Ask me about:
+
+                    <ul>
+
+                        <li>Alerts</li>
+
+                        <li>Incidents</li>
+
+                        <li>MITRE Techniques</li>
+
+                        <li>Privilege Escalation</li>
+
+                        <li>Attack Analysis</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="chat-input"
+                    placeholder="Ask about an incident..."
+                >
+
+                <button id="sendBtn">
+
+                    Send
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+
+</div>
+
+<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+<script src="../assets/js/investigation.js"></script>
+
+</body>
+</html>
